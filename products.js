@@ -5,7 +5,7 @@ const productType = urlParams.get("product_type"); //after ?product_type=..
 
 const getProducts = async () => {
   const response = await fetch(
-    `http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${productType}`
+    `https://cors-anywhere.herokuapp.com/http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${productType}`
   );
   return await response.json();
 };
